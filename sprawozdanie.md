@@ -10,7 +10,6 @@
 Celem ćwiczenia jest zbadanie procesu uczenia sieci rekurencyjnych (SimpleRNN, LSTM, GRU) w zadaniu prognozowania kolejnej próbki szeregu czasowego z szumem (układ sequence-to-vector / many-to-one). Analizie poddano wpływ rozmiaru stanu ukrytego (hidden), długości okna czasowego (OKNO) oraz architektury komórki na stabilność optymalizacji metodą BPTT, szybkość zbieżności i błąd testowy MSE w odniesieniu do heurystyk bazowych.
 
 ## 2. Metoda i implementacja
-
 - **Framework:** PyTorch 2.x, NumPy, Matplotlib.
 - **Sygnał:** Szereg syntetyczny $y(t) = \sin(t) + 0.1\sin(3t) + 0.05\epsilon$ ($N=2000$ próbek, $t \in [0, 100]$).
 - **Podział danych:** Chronologiczny (pierwsze 80% próbek na trening, ostatnie 20% na test). Zastosowano okienkowanie jednokrokowe `[N, okno, 1] -> [N, 1]`.
