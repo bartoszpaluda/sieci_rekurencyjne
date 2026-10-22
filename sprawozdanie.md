@@ -16,6 +16,8 @@ Celem ćwiczenia jest zbadanie procesu uczenia sieci rekurencyjnych (SimpleRNN, 
 - **Podział danych:** Chronologiczny (pierwsze 80% próbek na trening, ostatnie 20% na test). Zastosowano okienkowanie jednokrokowe `[N, okno, 1] -> [N, 1]`.
 - **Procedura treningowa:** Optymalizator Adam ($lr=0.01$), funkcja straty MSELoss, wielkość paczki 64, liczba epok 20, obcinanie gradientów (`clip_grad_norm_ = 5.0`).
 - **Modyfikacja kodu:** Rozbudowano pętlę uczenia o równoległe rejestrowanie straty treningowej `hist_train`. Każdy punkt pomiarowy powtórzono trzykrotnie dla ziaren losowych `seeds = [0, 1, 2]`. Jako wynik końcowy raportowano średnią oraz odchylenie standardowe z ostatnich 5 epok: `np.mean(hist[-5:])`.
+- **Link do Github**
+  https://github.com/bartoszpaluda/sieci_rekurencyjne/tree/main
 
 ## 3. Wyniki
 
